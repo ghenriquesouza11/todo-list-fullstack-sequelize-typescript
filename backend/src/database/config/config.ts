@@ -1,5 +1,5 @@
-"use strict";
-require("dotenv/config");
+import 'dotenv/config';
+
 const config = {
     username: process.env.DATABASE_USER,
     password: process.env.DATABASE_PASSWORD,
@@ -7,4 +7,5 @@ const config = {
     host: process.env.DATABASE_HOST,
     dialect: 'mysql',
 };
-module.exports = config;
+
+export = config;
