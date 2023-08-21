@@ -9,6 +9,13 @@ const createTask = async (req: Request, res: Response) => {
     return res.status(status).json({insertedId: data.id});
 };
 
+const getAllTasks = async (_req: Request, res: Response) => {
+    const {status, data} = await taskServices.getAllTasks();
+
+    return res.status(status).json(data);
+};
+
 export = {
     createTask,
+    getAllTasks,
 };
