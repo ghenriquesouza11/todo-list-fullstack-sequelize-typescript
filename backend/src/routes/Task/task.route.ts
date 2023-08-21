@@ -1,7 +1,8 @@
 import express from 'express';
+import taskControllers from '../../controllers/task.controllers';
 
 const taskRoute = express.Router();
 
-taskRoute.get('/task', (_req, res) => res.status(200).json({message: 'API funcionando!'}));
+taskRoute.post('/task', taskControllers.createTask);
 
 export = taskRoute;

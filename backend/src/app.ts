@@ -3,7 +3,7 @@ import router from './routes/router';
 
 const app = express();
 
-app.use(router);
 app.use(express.json());
+app.use(router);
 
 export = app;

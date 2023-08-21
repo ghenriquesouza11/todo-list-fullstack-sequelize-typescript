@@ -11,7 +11,10 @@ type TaskModelCreator = ModelDefined<Task, TaskInpputableFields>;
 const TaskModel: TaskModelCreator = db.define('Task', {
     title: DataTypes.STRING,
     status: DataTypes.STRING,
-    created_at: DataTypes.STRING,
+    created_at: {
+        type: DataTypes.DATE,
+        defaultValue: new Date(),
+    },
 },
 {
     timestamps: false,
