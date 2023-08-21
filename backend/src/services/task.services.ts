@@ -1,6 +1,6 @@
 import { TaskInpputableFields } from '../database/models/Task.model';
 import TaskModel from '../database/models/Task.model';
-import { Task } from '../database/types/Task';
+import { Task } from '../types/Task';
 
 type serviceResponse<T> = {
     status: number,

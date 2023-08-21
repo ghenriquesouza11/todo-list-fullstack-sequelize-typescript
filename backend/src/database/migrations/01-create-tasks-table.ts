@@ -1,6 +1,6 @@
 import { QueryInterface, Model, DataTypes } from 'sequelize';
 
-import { Task } from '../types/Task';
+import { Task } from '../../types/Task';
 
 export default {
     up(queryInterface: QueryInterface) {
