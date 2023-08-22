@@ -7,4 +7,8 @@ taskRoute.post('/task', taskControllers.createTask);
 
 taskRoute.get('/task', taskControllers.getAllTasks);
 
+taskRoute.put('/task/:id', taskControllers.updtadeTask);
+
+taskRoute.delete('/task/:id', taskControllers.deleteTask);
+
 export = taskRoute;

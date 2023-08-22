@@ -21,7 +21,26 @@ const getAllTasks = async (): Promise<serviceResponse<object>> => {
     return {status: 200, data: allTasks};
 };
 
+const updateTask = async (task: Task): Promise<serviceResponse<number>> => {
+    const {id, title, status} = task;
+
+    const [updatedTask] = await TaskModel.update(
+        {title, status},
+        {where: {id}},
+    );
+
+    return {status: 200, data: updatedTask};
+};
+
+const deleteTask = async (id: number): Promise<serviceResponse<number>> => {
+    const deletedTask = await TaskModel.destroy({where: {id}});
+
+    return {status: 200, data: deletedTask};
+};
+
 export = {
     createTask,
     getAllTasks,
+    updateTask,
+    deleteTask,
 };
